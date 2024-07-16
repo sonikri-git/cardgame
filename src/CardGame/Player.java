@@ -1,48 +1,28 @@
+package cardgame;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package CardGame;
 
 /**
  *
- * @author sonikri
+ *  @author Kritish Soni/ Student ID: 991720996
  */
 public class Player {
-  private final String name;
-    private final HandCard hand;
+    private String username;
+    private HandCard hand;
 
-    public Player(String name) {
-        this.name = name;
+    public Player(String username) {
+        this.username = username;
         this.hand = new HandCard();
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
     public HandCard getHand() {
         return hand;
     }
-
-    //add cards to hand
-    public void addCardToHand(Card card) {
-        hand.addCard(card);
-    }
-
-    public Card playCard() {
-        return hand.playCard();
-    }
-
-    //returns number of cards in hand
-    public int getHandSize() {
-        return hand.size();
-    }
-
-    //tells whether hand is empty or not
-    public boolean hasCards() {
-        return !hand.isEmpty();
-    }
 }
-   
-

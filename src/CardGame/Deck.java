@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package CardGame;
+package cardgame;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,11 +10,10 @@ import java.util.List;
 
 /**
  *
- * @author sonikri
+ *  @author Kritish Soni/ Student ID: 991720996
  */
 public class Deck {
-    
-private final List<Card> cards;
+   private final List<Card> cards;
 
     public Deck() {
         cards = new ArrayList<>();
@@ -36,6 +35,10 @@ private final List<Card> cards;
 
     public boolean isEmpty() {
         return cards.isEmpty();
+    }
+    
+    public int size() {
+        return cards.size();
     }
 }
 

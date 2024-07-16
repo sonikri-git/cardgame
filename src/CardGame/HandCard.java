@@ -2,37 +2,36 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package CardGame;
+package cardgame;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  *
- * @author sonikri
+ *   @author Kritish Soni/ Student ID: 991720996
  */
 public class HandCard {
-      private final List<Card> cards;
+    private LinkedList<Card> hand;
 
     public HandCard() {
-        cards = new ArrayList<>();
+        hand = new LinkedList<>();
     }
 
     public void addCard(Card card) {
-        if (card != null) {
-            cards.add(card);
-        }
+        hand.addLast(card);
     }
 
     public Card playCard() {
-        return cards.isEmpty() ? null : cards.remove(0);
+        return hand.removeFirst();
     }
 
     public int size() {
-        return cards.size();
+        return hand.size();
     }
 
     public boolean isEmpty() {
-        return cards.isEmpty();
+        return hand.isEmpty();
     }
 }
